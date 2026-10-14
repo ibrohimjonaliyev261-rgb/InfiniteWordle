@@ -201,15 +201,38 @@
     <!-- JavaScript Logic -->
     <script>
         // Standard word list subset (curated playable targets + valid dictionary entries)
-        const TARGET_WORDS = [
-            "APPLE", "BEACH", "BRAIN", "BREAD", "BREAK", "BROWN", "CHAIR", "CHEST",
-            "CHIEF", "CHILD", "CLOCK", "CLOUD", "DANCE", "DREAM", "DRIVE", "EARTH",
-            "ENEMY", "FIELD", "FINAL", "FLOOR", "FOCUS", "FRUIT", "GLASS", "GREEN",
-            "GROUP", "HEART", "HOUSE", "IMAGE", "LIGHT", "MONEY", "MONTH", "MUSIC",
-            "NIGHT", "NOISE", "PARTY", "PHONE", "PLANT", "POWER", "RADIO", "RIVER",
-            "SCENE", "SMILE", "SPACE", "SPORT", "STAGE", "STORM", "TABLE", "TASTE",
-            "WATER", "WHITE", "WORLD", "YOUTH", "FLAME", "GHOST", "SHARK", "TIGER"
-        ];
+       const TARGET_WORDS = [
+    "ABOUT", "ABOVE", "ACTOR", "ACUTE", "ADAPT", "ADMIT", "ADOPT", "ADULT", "AGENT", "AGREE",
+    "AHEAD", "ALARM", "ALBUM", "ALERT", "ALIEN", "ALIGN", "ALIKE", "ALIVE", "ALLOW", "ALMOST",
+    "ALONE", "ALONG", "ALTER", "AMBER", "AMONG", "AMUSE", "ANGEL", "ANGER", "ANGLE", "ANGRY",
+    "ANKLE", "ANNOY", "APART", "APPLE", "APPLY", "ARENA", "ARGUE", "ARISE", "ARMOR", "ARROW",
+    "ASIDE", "ASSET", "AUDIO", "AUDIT", "AVOID", "AWARD", "AWARE", "BADLY", "BAKER", "BASIC",
+    "BASIS", "BEACH", "BEGIN", "BEING", "BELOW", "BENCH", "BLACK", "BLAME", "BLANK", "BLAST",
+    "BLAZE", "BLEED", "BLEND", "BLESS", "BLIND", "BLOCK", "BLOOD", "BLOOM", "BOARD", "BOAST",
+    "BONUS", "BOOST", "BOUND", "BRAIN", "BRAND", "BREAD", "BREAK", "BRICK", "BRIDE", "BRIEF",
+    "BRING", "BROAD", "BROWN", "BRUSH", "BUILD", "BUILT", "BURST", "BUYER", "CABLE", "CANDY",
+    "CARRY", "CATCH", "CAUSE", "CHAIN", "CHAIR", "CHARM", "CHASE", "CHEAP", "CHECK", "CHEST",
+    "CHIEF", "CHILD", "CHINA", "CLAIM", "CLASS", "CLEAN", "CLEAR", "CLICK", "CLOCK", "CLOSE",
+    "CLOUD", "COACH", "COAST", "COUNT", "COURT", "COVER", "CRAFT", "CRASH", "CREAM", "CRIME",
+    "CRISP", "CROSS", "CROWD", "CROWN", "CRUSH", "CYCLE", "DAILY", "DANCE", "DEATH", "DELAY",
+    "DEPTH", "DOUBT", "DOZEN", "DRAFT", "DRAMA", "DREAM", "DRESS", "DRINK", "DRIVE", "EAGER",
+    "EARLY", "EARTH", "EIGHT", "ELITE", "EMPTY", "ENEMY", "ENJOY", "ENTER", "ENTRY", "EQUAL",
+    "ERROR", "EVENT", "EVERY", "EXACT", "EXIST", "EXTRA", "FAITH", "FALSE", "FAULT", "FIBER",
+    "FIELD", "FIFTH", "FIFTY", "FINAL", "FIRST", "FIXED", "FLAME", "FLASH", "FLEET", "FLOAT",
+    "FLOOR", "FLUID", "FOCUS", "FORCE", "FORTH", "FORTY", "FORUM", "FOUND", "FRAME", "FRANK",
+    "FRAUD", "FRESH", "FRONT", "FRUIT", "FULLY", "FUNNY", "GIANT", "GHOST", "GIVEN", "GLASS",
+    "GLOBE", "GOING", "GRACE", "GRADE", "GRAND", "GRANT", "GRASS", "GREAT", "GREEN", "GROSS",
+    "GROUP", "GROWN", "GUARD", "GUESS", "GUEST", "GUIDE", "HAPPY", "HEART", "HEAVY", "HENCE",
+    "HORSE", "HOTEL", "HOUSE", "HUMAN", "IDEAL", "IMAGE", "INDEX", "INNER", "INPUT", "ISSUE",
+    "JOINT", "JUDGE", "JUICE", "KNIFE", "KNOCK", "KNOWN", "LABEL", "LARGE", "LASER", "LATER",
+    "LAUGH", "LAYER", "LEARN", "LEASE", "LEAST", "LEAVE", "LEGAL", "LEMON", "LEVEL", "LIGHT",
+    "LIMIT", "LOCAL", "LOGIC", "LOOSE", "LOWER", "LUCKY", "LUNCH", "MAGIC", "MAJOR", "MAKER",
+    "MARCH", "MATCH", "MAYBE", "MAYOR", "MEANT", "MEDIA", "METAL", "MIGHT", "MINOR", "MINUS",
+    "MIXED", "MODEL", "MONEY", "MONTH", "MORAL", "MOTOR", "MOUNT", "MOUSE", "MOUTH", "MOVIE",
+    "MUSIC", "NEEDS", "NEVER", "NEWLY", "NIGHT", "NOISE", "NORTH", "NOVEL", "NURSE", "OCEAN",
+    "OFFER", "OFTEN", "ORDER", "OTHER", "OTTER", "OUTER", "OWNER", "PANEL", "PAPER", "PARTY",
+    "PEACE", "PHASE", "PHONE", "PHOTO", "PIANO", "PIECE", "PILOT", "PITCH", "PLACE", "PLAIN"
+];
 
         // Valid guess dictionary (loads thousands of official 5-letter words automatically)
         let VALID_GUESSES = new Set(TARGET_WORDS);
